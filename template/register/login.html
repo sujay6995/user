@@ -1,0 +1,14 @@
+{% extends "register/base.html" %}
+{% block body_block %}
+<div class="jumbotron">             
+  <h1>this is login page</h1>
+        <form action="{% url 'register:user_login'%}" method="post">
+        	{% csrf_token %}
+	          <label for="username">username:</label>
+	          <input type="text" name="username" placeholder="enter the username">
+	          <label for="password">password:</label>
+	          <input type="password" name="password" placeholder="enter ur password">
+	          <input type="submit" value="login">
+       </form>
+</div>
+{% endblock %}

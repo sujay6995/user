@@ -1,0 +1,10 @@
+{% extends "register/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+{% csrf_token %}
+{{form.captcha.errors}}
+ {{form.captcha}}
+    <div>
+        <input type="submit" value="Submit" />
+{% endblock %}
+    </div>
